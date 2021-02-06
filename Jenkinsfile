@@ -43,7 +43,7 @@ pipeline {
     stage ('DEV Deploy') {
       steps {
       echo "deploying to DEV Env "
-      deploy adapters: [tomcat9(credentialsId: '0e9e6590-2a22-448b-a33e-7ff6c6061ec9', path: '', url: 'url: 'http://ec2-52-33-36-0.us-west-2.compute.amazonaws.com:8080')], contextPath: null, war: '**/*.war'
+      deploy adapters: [tomcat9(credentialsId: '0e9e6590-2a22-448b-a33e-7ff6c6061ec9', path: '', url: 'http://ec2-52-33-36-0.us-west-2.compute.amazonaws.com:8080')], contextPath: null, war: '**/*.war'
       }
     }
         stage ('DEV Approve') {
@@ -57,7 +57,7 @@ pipeline {
      stage ('QA Deploy') {
       steps {
         echo "deploying to QA Env "
-        deploy adapters: [tomcat9(credentialsId: '0e9e6590-2a22-448b-a33e-7ff6c6061ec9', path: '', url: 'url: 'http://ec2-52-33-36-0.us-west-2.compute.amazonaws.com:8080')], contextPath: null, war: '**/*.war'
+        deploy adapters: [tomcat9(credentialsId: '0e9e6590-2a22-448b-a33e-7ff6c6061ec9', path: '', url: 'http://ec2-52-33-36-0.us-west-2.compute.amazonaws.com:8080')], contextPath: null, war: '**/*.war'
         }
     }
     stage ('QA Approve') {
